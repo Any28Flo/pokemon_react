@@ -2,7 +2,7 @@
 const initialState ={
     loading:false,
     error: null,
-    pokemon : []
+    list : []
 };
 const pokemonReducer = (state = initialState, action) => {
     switch(action.type){

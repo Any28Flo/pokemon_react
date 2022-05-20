@@ -2,5 +2,5 @@ import { combineReducers } from 'redux';
 import pokemonReducers from "./pokemonReducer";
 
 export default combineReducers({
-    listPokemon : pokemonReducers
+    pokemon : pokemonReducers
 });
