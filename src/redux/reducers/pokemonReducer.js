@@ -1,3 +1,8 @@
+import {
+    START_GET_POKEMON,
+    GET_POKEMON_SUCCESS,
+    GET_POKEMON_FAILED,
+} from "../types/pokemonTypes";
 
 const initialState ={
     loading:false,
@@ -6,6 +11,23 @@ const initialState ={
 };
 const pokemonReducer = (state = initialState, action) => {
     switch(action.type){
+        case START_GET_POKEMON:
+            return{
+                ...state,
+                loading: true
+            }
+        case GET_POKEMON_SUCCESS:
+            return{
+                ...state,
+                loading: true,
+                list: action.payload
+            }
+        case GET_POKEMON_FAILED:
+            return {
+                ...state,
+                loading: false,
+                error: action.payload
+            }
         default:
             return state;
     }

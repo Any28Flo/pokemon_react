@@ -5,7 +5,7 @@ const List = ({items}) => {
     return (
         <ul>
             {
-                items.map(item =>(
+                items?.map(item =>(
                     <Item data={item}/>
                 ))
             }
