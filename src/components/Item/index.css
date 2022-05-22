@@ -6,3 +6,9 @@
     width: 20rem;
     height: 20rem;
 }
+.pokemon-info_image_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+}
