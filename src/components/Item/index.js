@@ -1,8 +1,9 @@
+import "./index.css";
 const Item = ({data, img}) => {
     return (
         <div className='pokemon-info'>
             <div className='pokemon-info_image_wrapper'>
-                <img alt={data?.img} src={require(`../../${img.src}`)} />
+                <img className="pokemon-info_image" alt={data?.img} src={require(`../../${img.src}`)} />
             </div>
             <div className='pokemon-info_info'>
                 <h3>{data.name}</h3>

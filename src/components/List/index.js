@@ -4,7 +4,7 @@ import arrayImages from '../../helpers/arrayImages';
 
 const List = ({items}) => {
     return (
-        <div>
+        <div className='container'>
             {
                 items?.map((item,index) =>(
                     <Item data={item} img={arrayImages[index]}/>

@@ -1,0 +1,8 @@
+.pokemon-info{
+    border-radius: 2rem;
+    border: solid 1px black;
+}
+.pokemon-info_image{
+    width: 20rem;
+    height: 20rem;
+}
