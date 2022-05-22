@@ -1,22 +1,21 @@
-class pokeApi{
-    constructor() {
-        this.endpointURL = `https://pokeapi.co/api/v2`;
-    
-    }
-    async getPokemon(){
-        try {
-            let response = await fetch(`${this.endpointURL}/pokemon?limit=20`, {
-                method: "GET"
-            });
+class pokeApi {
+  constructor() {
+    this.endpointURL = `https://pokeapi.co/api/v2`;
+  }
+  async getPokemon() {
+    try {
 
-          
-            return await response.json();
+      let response = await fetch(`${this.endpointURL}/pokemon?limit=20`, {
+        method: "GET",
+      });
+
+      return await response.json();
+
+    } catch (e) {
         
-
-        }catch (e) {
-            console.log(e)
-        }
+      console.log(e);
     }
+  }
 }
 
 const pokeAPI = new pokeApi();

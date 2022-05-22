@@ -1,15 +1,16 @@
 import React from 'react';
 import Item from "../Item";
+import arrayImages from '../../helpers/arrayImages';
 
 const List = ({items}) => {
     return (
-        <ul>
+        <div>
             {
-                items?.map(item =>(
-                    <Item data={item}/>
+                items?.map((item,index) =>(
+                    <Item data={item} img={arrayImages[index]}/>
                 ))
             }
-        </ul>
+        </div>
     );
 };
 
