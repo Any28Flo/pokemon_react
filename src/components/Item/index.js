@@ -5,7 +5,7 @@ const Item = ({data, img}) => {
             <div className='pokemon-info_image_wrapper'>
                 <img className="pokemon-info_image" alt={data?.img} src={require(`../../${img.src}`)} />
             </div>
-            <div className='pokemon-info_info'>
+            <div className='pokemon-info_description'>
                 <h3>{data.name}</h3>
                 <button>See details</button>
             </div>

@@ -12,3 +12,25 @@
     align-items: center;
     padding-top: 1rem;
 }
+.pokemon-info_description{
+    text-align: center;
+}
+.pokemon-info_description h3{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2em;
+    text-align: center;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+.pokemon-info_description button{
+    border-radius: 1em;
+    background-color: green;
+    padding: 1rem 1rem 1rem 1rem;
+    color: white;
+    border: solid 1px green;
+    font-family: 'Press Start 2P', cursive;
+    margin-bottom: 1rem;
+}
+.pokemon-info_description button:hover{
+    background-color: red;
+}
