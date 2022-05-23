@@ -9,7 +9,7 @@ import Spinner from "../../components/Spinner";
 const Detail = () => {
     const dispatch = useDispatch();
     let {idPokemon} = useParams();
-    let image = arrayImages[idPokemon - 1];
+    let image =  arrayImages[idPokemon - 1];
 
     const {actualPokemon, loading} = useSelector(state => state.pokemon);
 
@@ -26,7 +26,7 @@ const Detail = () => {
                     <div className="pokemon-detail">
                         <div className="detail_wrapper image screen gray">
                             <img className="pokemon-info_image" alt={"pokemon-detail_image"}
-                                 src={require(`../../${image.src}`)}/>
+                                 src={ idPokemon >=20 ? require(`../../img/none.jpg`):   require(`../../${image.src}`)}/>
                         </div>
                         <div className="detail_wrapper info screen dark-gray">
                             <h2>{actualPokemon?.name}</h2>

@@ -5,7 +5,7 @@ class pokeApi {
   async getPokemon() {
     try {
 
-      let response = await fetch(`${this.endpointURL}/pokemon?limit=20`, {
+      let response = await fetch(`${this.endpointURL}/pokemon?limit=150&offset=0`, {
         method: "GET",
       });
 
