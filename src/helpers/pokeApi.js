@@ -1,6 +1,6 @@
 class pokeApi {
   constructor() {
-    this.endpointURL = `https://pokeapi.co/api/v2`;
+    this.endpointURL = `${process.env.REACT_APP_API_URL}`;
   }
   async getPokemon() {
     try {
