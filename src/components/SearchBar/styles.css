@@ -1,0 +1,12 @@
+.search-bar{
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.search-bar input{
+    width: 50%;
+    padding-top: 1rem ;
+    padding-bottom: 1rem;
+    border-radius: 1rem;
+    border: solid 2px red;
+}

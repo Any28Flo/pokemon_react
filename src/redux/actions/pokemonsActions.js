@@ -51,7 +51,6 @@ const pokemonActions = {
     };
   },
   searchPokemon: pokemon =>{
-    console.log(pokemon)
     return (dispatch) =>{
 
         dispatch({
