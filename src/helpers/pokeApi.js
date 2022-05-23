@@ -18,7 +18,7 @@ class pokeApi {
   }
   async getDetailPokemon(pokemonUrl) {
     try {
-      let response = await fetch(`${pokemonUrl}`, {
+      let response = await fetch(`${this.endpointURL}/pokemon/${pokemonUrl}`, {
         method: "GET",
       });
 
