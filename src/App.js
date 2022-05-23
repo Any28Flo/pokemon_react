@@ -1,25 +1,21 @@
-import { useEffect } from "react";
-import List from "./components/List";
-import { useSelector, useDispatch} from "react-redux";
-import {pokemon} from "./redux/actions";
+import Home from "./pages/Home";
+import Detail from "./pages/Detail";
 
+import {Routes, Route} from "react-router-dom";
 
 function App() {
-  const dispatch = useDispatch();
 
-  const {list} = useSelector(state => state.pokemon);
 
-  useEffect(()=>{
-    dispatch(pokemon.getPokemonAction());
-  }, [dispatch])
+    return (
+        <div className="App">
+            <h2>PokeApi</h2>
+            <Routes>
+                <Route path="/" element={<Home/>}/>
+                <Route path="/:idPokemon" element={<Detail/>}/>
+            </Routes>
 
-  return (
-    <div className="App">
-      <h2>PokeApi</h2>
-
-        <List items={list}/>
-    </div>
-  );
+        </div>
+    );
 }
 
 export default App;

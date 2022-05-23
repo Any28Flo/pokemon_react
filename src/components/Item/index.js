@@ -1,5 +1,7 @@
+import { Link } from "react-router-dom";
 import "./index.css";
 const Item = ({data, img}) => {
+    console.log(data)
     return (
         <div className='pokemon-info'>
             <div className='pokemon-info_image_wrapper'>
@@ -7,7 +9,9 @@ const Item = ({data, img}) => {
             </div>
             <div className='pokemon-info_description'>
                 <h3>{data.name}</h3>
-                <button>See details</button>
+                <Link to="/:idPokemon">
+                    <button>See details</button>
+                </Link>
             </div>
         </div>
     );
