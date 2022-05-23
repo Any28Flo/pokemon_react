@@ -1,0 +1,16 @@
+.nav{
+    padding-top: 2rem;
+}
+.brand{
+    padding-top: 2rem;
+}
+.brand a{
+    text-decoration: none;
+    color: green;
+    text-transform: uppercase;
+}
+.brand-name{
+    font-size: 3rem;
+    padding-left: 2rem;
+    margin-top: 2rem;
+}
