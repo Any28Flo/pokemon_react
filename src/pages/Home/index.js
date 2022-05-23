@@ -2,6 +2,7 @@ import React, {useEffect} from 'react';
 import List from "../../components/List";
 import {useDispatch, useSelector} from "react-redux";
 import {pokemon} from "../../redux/actions";
+import SearchBar from "../../components/SearchBar";
 
 const Home = () => {
     const dispatch = useDispatch();
@@ -14,6 +15,7 @@ const Home = () => {
 
     return (
         <div>
+            <SearchBar/>
             <List items={list}/>
         </div>
     );

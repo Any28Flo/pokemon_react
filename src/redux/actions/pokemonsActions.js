@@ -5,7 +5,10 @@ import {
   GET_POKEMON_FAILED,
   START_GET_POKEMON_DETAIL,
   GET_POKEMON_DETAIL_SUCCESS,
-  GET_POKEMON_DETAIL_FAILED
+  GET_POKEMON_DETAIL_FAILED,
+  START_SEARCH_POKEMON,
+  SEARCH_POKEMON_SUCCESS,
+  SEARCH_POKEMON_FAILED
 } from "../types/pokemonTypes";
 
 const pokemonActions = {
@@ -46,6 +49,18 @@ const pokemonActions = {
         });
       }
     };
+  },
+  searchPokemon: pokemon =>{
+    console.log(pokemon)
+    return (dispatch) =>{
+
+        dispatch({
+          type: SEARCH_POKEMON_SUCCESS,
+          payload: pokemon
+        });
+
+    }
+
   }
 };
 export default pokemonActions;
