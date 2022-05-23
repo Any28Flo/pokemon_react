@@ -16,6 +16,19 @@ class pokeApi {
       console.log(e);
     }
   }
+  async getDetailPokemon(pokemonUrl) {
+    try {
+      let response = await fetch(`${pokemonUrl}`, {
+        method: "GET",
+      });
+
+      return await response.json();
+
+    } catch (e) {
+
+      console.log(e);
+    }
+  }
 }
 
 const pokeAPI = new pokeApi();

@@ -10,7 +10,8 @@ import {
 const initialState ={
     loading:false,
     error: null,
-    list : []
+    list : [],
+    actualPokemon: null
 };
 const pokemonReducer = (state = initialState, action) => {
     switch(action.type){
@@ -20,7 +21,6 @@ const pokemonReducer = (state = initialState, action) => {
                 ...state,
                 loading: true
             }
-        case GET_POKEMON_DETAIL_SUCCESS:    
         case GET_POKEMON_SUCCESS:
             return{
                 ...state,
@@ -34,7 +34,12 @@ const pokemonReducer = (state = initialState, action) => {
                 loading: false,
                 error: action.payload
             }
-                
+        case GET_POKEMON_DETAIL_SUCCESS:
+            return {
+                ...state,
+                loading: false,
+                actualPokemon: action.payload
+            }
         default:
             return state;
     }
