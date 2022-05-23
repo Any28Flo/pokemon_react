@@ -4,7 +4,9 @@ import {
     GET_POKEMON_FAILED,
     START_GET_POKEMON_DETAIL,
     GET_POKEMON_DETAIL_SUCCESS,
-    GET_POKEMON_DETAIL_FAILED, START_SEARCH_POKEMON, SEARCH_POKEMON_SUCCESS
+    GET_POKEMON_DETAIL_FAILED,
+    START_SEARCH_POKEMON,
+    SEARCH_POKEMON_SUCCESS
 } from "../types/pokemonTypes";
 
 const initialState ={
@@ -38,7 +40,7 @@ const pokemonReducer = (state = initialState, action) => {
         case GET_POKEMON_DETAIL_SUCCESS:
             return {
                 ...state,
-                loading: true,
+                loading: false,
                 actualPokemon: action.payload
             }
         case SEARCH_POKEMON_SUCCESS:
@@ -52,7 +54,7 @@ const pokemonReducer = (state = initialState, action) => {
                 })
             }
         case START_GET_POKEMON_DETAIL:
-            console.log("hol")
+
             return {
                 ...state,
                 loading: true

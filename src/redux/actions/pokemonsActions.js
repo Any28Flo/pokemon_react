@@ -6,9 +6,7 @@ import {
   START_GET_POKEMON_DETAIL,
   GET_POKEMON_DETAIL_SUCCESS,
   GET_POKEMON_DETAIL_FAILED,
-  START_SEARCH_POKEMON,
   SEARCH_POKEMON_SUCCESS,
-  SEARCH_POKEMON_FAILED
 } from "../types/pokemonTypes";
 
 const pokemonActions = {
@@ -31,13 +29,13 @@ const pokemonActions = {
       }
     };
   },
-  getPokemonDetail:(pokemonUrl) =>{
+  getPokemonDetail:(idPokemon) =>{
     return async (dispatch) => {
       dispatch({
         type: START_GET_POKEMON_DETAIL,
       });
       try {
-        const response = await pokeAPI.getDetailPokemon(pokemonUrl);
+        const response = await pokeAPI.getDetailPokemon(idPokemon);
         dispatch({
           type: GET_POKEMON_DETAIL_SUCCESS,
           payload: response

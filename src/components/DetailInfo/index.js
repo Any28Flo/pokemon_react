@@ -1,11 +1,12 @@
 import React from 'react';
+import "./index.css";
 
 const DetailInfo = ({actualPokemon}) => {
     return (
         <div className="pokemon-detail">
             <div className="detail_wrapper image screen gray">
                 <img className="pokemon-info_image"
-                     src={actualPokemon.sprites.front_default}
+                     src={actualPokemon?.sprites.front_default}
                      alt={"pokemon-detail_image"}
                 />
             </div>

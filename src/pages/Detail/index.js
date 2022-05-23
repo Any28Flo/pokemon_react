@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 
 import {useParams} from "react-router-dom";
-import "./index.css";
+
 import Spinner from "../../components/Spinner";
 import {useDispatch, useSelector} from "react-redux";
 import {pokemon} from "../../redux/actions";
@@ -14,16 +14,16 @@ const Detail = () => {
 
 
     const {actualPokemon,loading} = useSelector(state => state.pokemon);
-
     useEffect(() => {
+
         dispatch(pokemon.getPokemonDetail(idPokemon));
     }, [dispatch, idPokemon])
 
     return (
         <div>
-        {
-            loading ? Spinner : <DetailInfo actualPokemon={actualPokemon}/>
-        }
+            {
+                loading ?   <Spinner/> : <DetailInfo actualPokemon={actualPokemon}/>
+            }
         </div>
 );
 };
