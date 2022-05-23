@@ -33,4 +33,5 @@
 }
 .pokemon-info_description button:hover{
     background-color: red;
+    border: solid 1px red;
 }

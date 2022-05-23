@@ -1,7 +1,4 @@
 
-body{
-    background-color: #192935;
-}
 
 .wrapper
 {
@@ -46,6 +43,7 @@ body{
     right: 18px;
     z-index: 1;
 }
+
 @keyframes frames{
     0% {
         transform: rotate(0deg);

@@ -25,7 +25,7 @@ const pokemonReducer = (state = initialState, action) => {
         case GET_POKEMON_SUCCESS:
             return{
                 ...state,
-                loading: true,
+                loading: false,
                 list: action.payload
             }
         case GET_POKEMON_DETAIL_FAILED:
