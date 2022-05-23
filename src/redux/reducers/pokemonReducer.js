@@ -15,7 +15,7 @@ const initialState ={
 };
 const pokemonReducer = (state = initialState, action) => {
     switch(action.type){
-        case START_GET_POKEMON_DETAIL:
+
         case START_GET_POKEMON:
         case START_SEARCH_POKEMON:
             return{
@@ -38,7 +38,7 @@ const pokemonReducer = (state = initialState, action) => {
         case GET_POKEMON_DETAIL_SUCCESS:
             return {
                 ...state,
-                loading: false,
+                loading: true,
                 actualPokemon: action.payload
             }
         case SEARCH_POKEMON_SUCCESS:
@@ -50,6 +50,12 @@ const pokemonReducer = (state = initialState, action) => {
                        return pokemon
                    }
                 })
+            }
+        case START_GET_POKEMON_DETAIL:
+            console.log("hol")
+            return {
+                ...state,
+                loading: true
             }
         default:
             return state;

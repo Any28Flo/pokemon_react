@@ -1,15 +1,22 @@
 class pokeApi {
   constructor() {
-    this.endpointURL = `${process.env.REACT_APP_API_URL}`;
+    this.endpointURL = `https://pokeapi.co/api/v2`;
   }
   async getPokemon() {
     try {
 
-      let response = await fetch(`${this.endpointURL}/pokemon?limit=150&offset=0`, {
+      let response = await fetch(`${this.endpointURL}/pokemon?limit=3&offset=0`, {
         method: "GET",
       });
 
-      return await response.json();
+      let json = await response.json();
+
+  return await Promise.all(json.results.map(async item => {
+
+    let response = await fetch(item.url)
+    return await response.json()
+  }))
+
 
     } catch (e) {
         
@@ -17,6 +24,7 @@ class pokeApi {
     }
   }
   async getDetailPokemon(pokemonUrl) {
+
     try {
       let response = await fetch(`${this.endpointURL}/pokemon/${pokemonUrl}`, {
         method: "GET",

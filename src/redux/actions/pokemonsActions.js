@@ -21,7 +21,7 @@ const pokemonActions = {
         const response = await pokeAPI.getPokemon();
         dispatch({
           type: GET_POKEMON_SUCCESS,
-          payload: response.results,
+          payload: response,
         });
       } catch (error) {
         dispatch({

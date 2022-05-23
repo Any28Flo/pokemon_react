@@ -7,7 +7,7 @@ const List = ({items}) => {
         <div className='container'>
             {
                 items?.map((item,index) =>(
-                    <Item key={`pokemon-${index}`} data={item} img={arrayImages[index]} index={index}/>
+                    <Item key={`pokemon-${index}`} data={item}  index={index}/>
                 ))
             }
         </div>
